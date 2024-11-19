@@ -10,8 +10,8 @@
   **Solution:** Add more extensions, with individual behavior for each.
 
 - **Problem:** The function `classify_file()` is also very limiting. It is simply a string match.  
-  For example, it checks if `drivers_license` is in the file name, then it's classified as a `drivers_licence`. There are several issues:
-  - Spelling inconsistency.
+  For example, it checks if `drivers_license` is in the file name, then it's classified as a `drivers_licence`. With this alone, there are several issues, which would apply to most classes:
+  - Spelling inconsistency ('license' vs 'licence').
   - Variations in how people refer to files, such as `driving_licence`, `license`, and different spellings.
   - Ambiguous file names like `invoice_bank_statement`, which could be either an invoice or a bank statement.  
   **Solution:** The classifier should inspect not only the filenames but also the file contents. Use libraries like PyMuPDF/PyPDF2 for PDFs, Tesseract for images, python-docx for `.doc` files, and pandas/openpyxl for Excel files. Then, feed the data into an ML model for classification.
