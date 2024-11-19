@@ -14,8 +14,7 @@
   - Spelling inconsistency ('license' vs 'licence').
   - Variations in how people refer to files, such as `driving_licence`, `license`, and different spellings.
   - Ambiguous file names like `invoice_bank_statement`, which could be either an invoice or a bank statement.
-
- **Solution:** The classifier should inspect not only the filenames but also the file contents. Use libraries like PyMuPDF/PyPDF2 for PDFs, Tesseract for images, python-docx for `.doc` files, and pandas/openpyxl for Excel files. Then, feed the data into an ML model for classification.
+  - **Solution:** The classifier should inspect not only the filenames but also the file contents. Use libraries like PyMuPDF/PyPDF2 for PDFs, Tesseract for images, python-docx for `.doc` files, and pandas/openpyxl for Excel files. Then, feed the data into an ML model for classification.
 
 - **Problem:** The classifier will be slow if large documents or many documents are submitted at the same time because it processes synchronously, waiting for one document to complete before moving to the next.  
   **Solution:** Use asynchronous processing (such as Celery or Quart) and a task queue (such as Redis).
