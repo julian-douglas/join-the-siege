@@ -45,7 +45,6 @@
    - Ensure files are scanned for malware and implement an authentication system. Due to time constraints, this was not implemented in code.
    - Consider implementing a deletion system to remove files after a certain amount of time.
 
----
 
 #### How to Deploy to Make It Accessible to Other Services and Users?
 
@@ -53,3 +52,8 @@ To deploy this service for access across all environments:
 1. **Containerisation:** The program must be containerised using Docker. This will make it easy to deploy using a pipeline on services like Azure DevOps, supporting continuous integration and deployment.
 2. **Cloud Deployment:** Use a cloud platform like AWS, GCP, or Heroku. For file storage, AWS S3 can be used.
 3. **Frontend (Optional):** Create a front end that interacts with the API. Users can upload a file via an HTML form, and a POST request will be made to the API upon submission.
+
+
+--- 
+
+To run the code, simply clone the repo, and cd into it. Then run `python -m src.app` as per the original. Run `pytest` for tests as well. I wrote tests for each of the features I implemented.
