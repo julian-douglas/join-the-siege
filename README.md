@@ -7,7 +7,7 @@
 #### Limitations and Solutions
 
 - **Problem:** The file naming system is quite restrictive and only accepts three extensions: `pdf`, `png`, `jpg`. Other formats like `.txt`, `.jpeg`, `.doc`, `.csv`, `.heic`, `.tiff`, etc., are not supported.  
-  **Solution:** Add more extensions, with individual behavior for each.
+  **Solution:** Add more extensions, with individual behaviour for each.
 
 - **Problem:** The function `classify_file()` is also very limiting. It is simply a string match.  
   For example, it checks if `drivers_license` is in the file name, then it's classified as a `drivers_licence`. With this alone, there are several issues, which would apply to most classes:
